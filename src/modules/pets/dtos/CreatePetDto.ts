@@ -1,4 +1,4 @@
-import { Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Column } from 'typeorm';
 import { IsEmpty, MaxLength } from 'class-validator';
 
 export class CreatePetDto {

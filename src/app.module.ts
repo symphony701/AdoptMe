@@ -17,6 +17,7 @@ import { AdoptionRequestModule } from './modules/adoption-request/adoption-reque
 import { Users } from './modules/users/entities/users_entity';
 import { Countries } from './modules/countries/entities/countries_entity';
 import { Departments } from './modules/departments/entities/departments_entity';
+import { Pets } from './modules/pets/entities/PetEntity';
 
 @Module({
   imports: [
@@ -28,7 +29,7 @@ import { Departments } from './modules/departments/entities/departments_entity';
       username: 'GdQkKixXdN',
       password: 'PMvRTkeupb',
       database: 'GdQkKixXdN',
-      entities: [Users, Departments, Countries],
+      entities: [Users, Departments, Countries, Pets],
       synchronize: true,
     }),
     UbicationsModule,
