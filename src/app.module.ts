@@ -15,6 +15,8 @@ import { CountriesModule } from './modules/countries/countries.module';
 import { AdvertisementsModule } from './modules/advertisements/advertisements.module';
 import { AdoptionRequestModule } from './modules/adoption-request/adoption-request.module';
 import { Users } from './modules/users/entities/users_entity';
+import { Countries } from './modules/countries/entities/countries_entity';
+import { Departments } from './modules/departments/entities/departments_entity';
 
 @Module({
   imports: [
@@ -26,7 +28,7 @@ import { Users } from './modules/users/entities/users_entity';
       username: 'GdQkKixXdN',
       password: 'PMvRTkeupb',
       database: 'GdQkKixXdN',
-      entities: [Users],
+      entities: [Users, Departments, Countries],
       synchronize: true,
     }),
     UbicationsModule,
