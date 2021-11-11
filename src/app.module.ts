@@ -18,18 +18,24 @@ import { Users } from './modules/users/entities/users_entity';
 import { Countries } from './modules/countries/entities/countries_entity';
 import { Departments } from './modules/departments/entities/departments_entity';
 import { Pets } from './modules/pets/entities/PetEntity';
+import { Publications } from "./modules/publications/entities/PublicationEntity";
 
 @Module({
   imports: [
     UsersModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'remotemysql.com',
+      // host: 'remotemysql.com',
+      // port: 3306,
+      // username: 'GdQkKixXdN',
+      // password: 'PMvRTkeupb',
+      // database: 'GdQkKixXdN',
+      host: 'localhost',
       port: 3306,
-      username: 'GdQkKixXdN',
-      password: 'PMvRTkeupb',
-      database: 'GdQkKixXdN',
-      entities: [Users, Departments, Countries, Pets],
+      username: 'root',
+      password: 'mysql',
+      database: 'demo2',
+      entities: [Users, Departments, Countries, Pets, Publications],
       synchronize: true,
     }),
     UbicationsModule,

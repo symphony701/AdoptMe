@@ -14,8 +14,17 @@ export class PetsService {
   findAll(): Promise<Pets[]> {
     return this.petsRepository.find();
   }
-
+  find(id: number): Promise<Pets> {
+    return this.petsRepository.findOne(id);
+  }
   insert(createPetsDto: CreatePetDto) {
     return this.petsRepository.insert(createPetsDto);
+  }
+
+  delete(id: number) {
+    return this.petsRepository.delete(id);
+  }
+  update(id: number, pet: CreatePetDto) {
+    return this.petsRepository.update(id, pet);
   }
 }
