@@ -1,44 +1,40 @@
 import { Column } from 'typeorm';
-import { IsEmpty, MaxLength } from 'class-validator';
+import { IsBoolean, IsEmpty, IsInt, Max, MaxLength, Min } from "class-validator";
 
 export class CreatePetDto {
   @Column()
-  @IsEmpty()
   @MaxLength(20)
   public Name: string;
 
   @Column()
-  @IsEmpty()
   @MaxLength(20)
   public Type: string;
 
   @Column()
-  @IsEmpty()
   @MaxLength(20)
   public Attention: string;
 
   @Column()
-  @IsEmpty()
   @MaxLength(20)
   public Race: string;
 
   @Column()
-  @IsEmpty()
-  @MaxLength(20)
-  public Age: string;
+  @IsInt()
+  @Min(0)
+  @Max(10)
+  public Age: number;
 
   @Column()
-  @IsEmpty()
-  @MaxLength(20)
-  public IsAdopted: string;
+  @IsBoolean()
+  public IsAdopted: boolean;
 
   @Column()
-  @IsEmpty()
-  @MaxLength(20)
-  public UserId: string;
+  @IsInt()
+  @Min(0)
+  @Max(10)
+  public UserId: number;
 
   @Column()
-  @IsEmpty()
   @MaxLength(20)
   public DateTime: string;
 }
