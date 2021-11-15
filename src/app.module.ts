@@ -19,6 +19,8 @@ import { Countries } from './modules/countries/entities/countries_entity';
 import { Departments } from './modules/departments/entities/departments_entity';
 import { Pets } from './modules/pets/entities/PetEntity';
 import { Publications } from "./modules/publications/entities/PublicationEntity";
+import { AdoptionRequests } from "./modules/adoption-request/entities/AdoptionRequestEntity";
+import { Memberships } from "./modules/memberships/entities/MembershipEntity";
 
 @Module({
   imports: [
@@ -35,7 +37,7 @@ import { Publications } from "./modules/publications/entities/PublicationEntity"
       username: 'root',
       password: 'mysql',
       database: 'demo2',
-      entities: [Users, Departments, Countries, Pets, Publications],
+      entities: [Users, Departments, Countries, Pets, Publications, AdoptionRequests, Memberships],
       synchronize: true,
     }),
     UbicationsModule,
