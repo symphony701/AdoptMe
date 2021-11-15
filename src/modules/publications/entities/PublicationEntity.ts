@@ -1,6 +1,7 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 import { MaxLength } from 'class-validator';
 import { Pets } from '../../pets/entities/PetEntity';
+import { AdoptionRequests } from "../../adoption-request/entities/AdoptionRequestEntity";
 
 @Entity('publications')
 export class Publications {
@@ -17,4 +18,7 @@ export class Publications {
 
   @OneToMany(() => Pets, (pets) => pets.publication)
   pets: Pets[];
+
+  @OneToMany(() => AdoptionRequests, (adoptionrequests) => adoptionrequests.publicationId)
+  adoptionrequests: AdoptionRequests[];
 }
