@@ -3,7 +3,7 @@ import { AdvertisementsService } from "../advertisements/advertisements.service"
 import { AdoptionRequestService } from "./adoption-request.service";
 import { CreateAdoptionRequests } from "./dtos/CreateAdoptionRequestsDto";
 
-@Controller('adoption-request')
+@Controller('api/v1/adoption-request')
 export class AdoptionRequestController {
   constructor(private readonly  adoptionRequestService:AdoptionRequestService) {
   }
@@ -14,7 +14,7 @@ export class AdoptionRequestController {
   }
 
   @Get(':id')
-  find(@Param('id')id:number){
+  find(@Param('id') id: number){
     return this.adoptionRequestService.find(id);
   }
 

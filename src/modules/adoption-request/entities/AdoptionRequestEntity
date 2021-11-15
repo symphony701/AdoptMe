@@ -26,6 +26,6 @@ export class AdoptionRequests{
   public date: string;
 
   @Column()
-  @IsBoolean
+  @IsBoolean()
   public approved: boolean;
 }

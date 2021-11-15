@@ -11,7 +11,7 @@ export class AdoptionRequestService {
     private readonly adoptionRequestsRepository: Repository<AdoptionRequests>
   ) {}
 
-  findAll(): Promise<AdoptionRequests>
+  findAll(): Promise<AdoptionRequests[]>
   {
     return this.adoptionRequestsRepository.find();
   }
