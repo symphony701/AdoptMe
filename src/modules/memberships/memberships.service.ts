@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { InjectRepository } from "@nestjs/typeorm";
-import { Repository } from "typeorm";
-import { Memberships } from "./entities/MembershipEntity";
-import { CreateMemberships } from "./dtos/CreateMembershipDto";
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { Memberships } from './entities/MembershipEntity';
+import { CreateMemberships } from './dtos/CreateMembershipDto';
 
 @Injectable()
 export class MembershipsService {
@@ -26,5 +26,4 @@ export class MembershipsService {
   update(id: number, createMemberships: CreateMemberships) {
     return this.membershipsRepository.update(id, createMemberships);
   }
-
 }

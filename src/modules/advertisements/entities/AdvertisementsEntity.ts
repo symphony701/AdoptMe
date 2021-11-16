@@ -1,16 +1,15 @@
-import {Column, Entity,OneToMany,PrimaryGeneratedColumn} from 'typeorm'
-import {MaxLength} from "class-validator";
-import {Users } from "../../users/entities/users_entity";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { MaxLength } from 'class-validator';
+import { Users } from '../../users/entities/users_entity';
 
 @Entity('advertisements')
-export class Advertisements
-{
+export class Advertisements {
   @PrimaryGeneratedColumn()
-  public id :number;
+  public id: number;
 
   @Column()
   @MaxLength(30)
-  public Titled:string
+  public Titled: string;
 
   @Column()
   @MaxLength(100)
@@ -20,6 +19,5 @@ export class Advertisements
   @MaxLength(20)
   public Datetime: string;
 
- // @OneToMany(()=>Users,(users)=>users.advetisements)
-
+  // @OneToMany(()=>Users,(users)=>users.advetisements)
 }

@@ -1,8 +1,14 @@
-import { Column, Entity, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
-import {  MaxLength } from "class-validator";
+import {
+  Column,
+  Entity,
+  OneToMany,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+import { MaxLength } from 'class-validator';
 
-@Entity('Memberships')
-export class Memberships{
+@Entity('memberships')
+export class Memberships {
   @PrimaryGeneratedColumn()
   public Id: number;
 

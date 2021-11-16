@@ -1,6 +1,14 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
-import { MembershipsService } from "./memberships.service";
-import { CreateMemberships } from "./dtos/CreateMembershipDto";
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  Put,
+} from '@nestjs/common';
+import { MembershipsService } from './memberships.service';
+import { CreateMemberships } from './dtos/CreateMembershipDto';
 
 @Controller('api/v1/memberships')
 export class MembershipsController {
