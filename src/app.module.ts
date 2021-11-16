@@ -41,6 +41,7 @@ import { Advertisements } from './modules/advertisements/entities/Advertisements
         Publications,
         AdoptionRequests,
         Memberships,
+        Advertisements,
       ],
       synchronize: true,
     }),
