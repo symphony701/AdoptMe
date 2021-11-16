@@ -21,6 +21,7 @@ import { Pets } from './modules/pets/entities/PetEntity';
 import { Publications } from "./modules/publications/entities/PublicationEntity";
 import { AdoptionRequests } from "./modules/adoption-request/entities/AdoptionRequestEntity";
 import { Memberships } from "./modules/memberships/entities/MembershipEntity";
+import { Advertisements } from './modules/advertisements/entities/AdvertisementsEntity';
 
 @Module({
   imports: [
@@ -51,6 +52,7 @@ import { Memberships } from "./modules/memberships/entities/MembershipEntity";
     CountriesModule,
     AdvertisementsModule,
     AdoptionRequestModule,
+    Advertisements,
   ],
   controllers: [AppController],
   providers: [AppService],
