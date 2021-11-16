@@ -8,7 +8,7 @@
     "scripts": {
         "prebuild": "rimraf dist",
         "postinstall": "npm run prestart:prod",
-        "prestart:prod": "npm run prestart:prod",
+        "prestart:prod": "rimraf dist && tsc",
         "build": "nest build",
         "start:prod": "node dist/main",
         "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -22,7 +22,6 @@
         "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
         "test:e2e": "jest --config ./test/jest-e2e.json",
         "start:prod": "node dist/main.js",
-
         "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build"
     },
     "dependencies": {
