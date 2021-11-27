@@ -22,17 +22,18 @@ import { Publications } from './modules/publications/entities/PublicationEntity'
 import { AdoptionRequests } from './modules/adoption-request/entities/AdoptionRequestEntity';
 import { Memberships } from './modules/memberships/entities/MembershipEntity';
 import { Advertisements } from './modules/advertisements/entities/AdvertisementsEntity';
+import { Districts } from './modules/districts/entities/DistrictEntity';
 
 @Module({
   imports: [
     UsersModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'us-cdbr-east-04.cleardb.com',
+      host: 'localhost',
       port: 3306,
-      username: 'b9feb050bdc9d1',
-      password: '298a1688',
-      database: 'heroku_35692114e753e55',
+      username: 'root',
+      password: 'mysql',
+      database: 'demo',
       entities: [
         Users,
         Departments,
@@ -42,6 +43,7 @@ import { Advertisements } from './modules/advertisements/entities/Advertisements
         AdoptionRequests,
         Memberships,
         Advertisements,
+        Districts,
       ],
       synchronize: true,
     }),
