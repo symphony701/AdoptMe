@@ -8,6 +8,7 @@ import {
 } from 'typeorm';
 import { MaxLength } from 'class-validator';
 import { Users } from '../../users/entities/users_entity';
+import { Ubications } from "../../ubications/entities/UbicationEntity";
 
 @Entity('districts')
 export class Districts {
@@ -23,6 +24,6 @@ export class Districts {
   public Description: string;
 
   // Cuando terminen la entidad Locations
-  // @OneToMany(() => Locations, (locations) => locations.id)
-  // public Locations: Locations[];
+   @OneToMany(() => Ubications, (ubications) => ubications.Id)
+   public Ubications: Ubications[];
 }

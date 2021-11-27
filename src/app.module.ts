@@ -18,33 +18,29 @@ import { Users } from './modules/users/entities/users_entity';
 import { Countries } from './modules/countries/entities/countries_entity';
 import { Departments } from './modules/departments/entities/departments_entity';
 import { Pets } from './modules/pets/entities/PetEntity';
-import { Publications } from './modules/publications/entities/PublicationEntity';
-import { AdoptionRequests } from './modules/adoption-request/entities/AdoptionRequestEntity';
-import { Memberships } from './modules/memberships/entities/MembershipEntity';
+import { Publications } from "./modules/publications/entities/PublicationEntity";
+import { AdoptionRequests } from "./modules/adoption-request/entities/AdoptionRequestEntity";
+import { Memberships } from "./modules/memberships/entities/MembershipEntity";
 import { Advertisements } from './modules/advertisements/entities/AdvertisementsEntity';
-import { Districts } from './modules/districts/entities/DistrictEntity';
+import {Ubications} from "./modules/ubications/entities/UbicationEntity";
+import { Districts } from "./modules/districts/entities/DistrictEntity";
 
 @Module({
   imports: [
     UsersModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
+      // host: 'remotemysql.com',
+      // port: 3306,
+      // username: 'GdQkKixXdN',
+      // password: 'PMvRTkeupb',
+      // database: 'GdQkKixXdN',
       host: 'localhost',
       port: 3306,
       username: 'root',
-      password: 'mysql',
-      database: 'demo',
-      entities: [
-        Users,
-        Departments,
-        Countries,
-        Pets,
-        Publications,
-        AdoptionRequests,
-        Memberships,
-        Advertisements,
-        Districts,
-      ],
+      password: '12345',
+      database: 'demo2',
+      entities: [Users, Departments, Countries, Pets, Publications, AdoptionRequests, Memberships,Ubications,Districts,Advertisements],
       synchronize: true,
     }),
     UbicationsModule,
@@ -59,6 +55,7 @@ import { Districts } from './modules/districts/entities/DistrictEntity';
     AdvertisementsModule,
     AdoptionRequestModule,
     Advertisements,
+    Ubications,
   ],
   controllers: [AppController],
   providers: [AppService],
