@@ -1,4 +1,11 @@
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn} from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 import { MaxLength } from 'class-validator';
 import { Users } from '../../users/entities/users_entity';
 
@@ -15,6 +22,7 @@ export class Districts {
   @MaxLength(100)
   public Description: string;
 
-  @ManyToOne(() => Users, (users) => users.id)
-  public Users: Users;
+  // Cuando terminen la entidad Locations
+  // @OneToMany(() => Locations, (locations) => locations.id)
+  // public Locations: Locations[];
 }
