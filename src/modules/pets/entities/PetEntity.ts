@@ -1,6 +1,19 @@
-import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
-import { IsBoolean, IsEmpty, IsInt, Max, MaxLength, Min } from "class-validator";
-import { Publications } from "../../publications/entities/PublicationEntity";
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+import {
+  IsBoolean,
+  IsEmpty,
+  IsInt,
+  Max,
+  MaxLength,
+  Min,
+} from 'class-validator';
+import { Publications } from '../../publications/entities/PublicationEntity';
 
 @Entity('pets')
 export class Pets {
