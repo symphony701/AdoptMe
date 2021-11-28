@@ -24,6 +24,7 @@ import { Memberships } from "./modules/memberships/entities/MembershipEntity";
 import { Advertisements } from './modules/advertisements/entities/AdvertisementsEntity';
 import {Ubications} from "./modules/ubications/entities/UbicationEntity";
 import { Districts } from "./modules/districts/entities/DistrictEntity";
+import { DetailsRequests } from './modules/details/entities/DetailsRequestEntity';
 
 @Module({
   imports: [
@@ -36,11 +37,23 @@ import { Districts } from "./modules/districts/entities/DistrictEntity";
       // password: 'PMvRTkeupb',
       // database: 'GdQkKixXdN',
       host: 'localhost',
-      port: 3306,
       username: 'root',
-      password: '12345',
+      port: 3306,
+      password: 'PASSWORDPASSWORD',
       database: 'demo2',
-      entities: [Users, Departments, Countries, Pets, Publications, AdoptionRequests, Memberships,Ubications,Districts,Advertisements],
+      entities: [
+        Users,
+        Departments,
+        Countries,
+        Pets,
+        Publications,
+        AdoptionRequests,
+        Memberships,
+        Ubications,
+        Districts,
+        Advertisements,
+        DetailsRequests
+      ],
       synchronize: true,
     }),
     UbicationsModule,
