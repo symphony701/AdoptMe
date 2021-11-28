@@ -9,6 +9,7 @@ import {
 } from 'typeorm';
 import { IsBoolean, IsInt, Max, MaxLength, Min } from 'class-validator';
 import { Publications } from '../../publications/entities/PublicationEntity';
+import { DetailsRequests } from '../../details/entities/DetailsRequestEntity';
 
 @Entity('adoptionrequests')
 export class AdoptionRequests {
@@ -38,4 +39,9 @@ export class AdoptionRequests {
   @Column()
   @IsBoolean()
   public approved: boolean;
+
+  @OneToOne(() => DetailsRequests,
+    details => details.adoption) // specify inverse side as a second parameter
+
+  details: DetailsRequests;
 }

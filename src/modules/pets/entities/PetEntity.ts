@@ -3,6 +3,7 @@ import {
   Entity,
   JoinColumn,
   ManyToOne,
+  OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import {
@@ -14,6 +15,7 @@ import {
   Min,
 } from 'class-validator';
 import { Publications } from '../../publications/entities/PublicationEntity';
+import { DetailsRequests } from '../../details/entities/DetailsRequestEntity';
 
 @Entity('pets')
 export class Pets {
@@ -58,4 +60,7 @@ export class Pets {
 
   @ManyToOne(() => Publications, (publication) => publication.pets)
   publication: Publications;
+
+  @OneToMany(() => DetailsRequests, (requests) => requests.petId)
+  requests: DetailsRequests[];
 }
