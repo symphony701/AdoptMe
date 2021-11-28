@@ -1,6 +1,21 @@
-import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
-import { IsBoolean, IsEmpty, IsInt, Max, MaxLength, Min } from "class-validator";
-import { Publications } from "../../publications/entities/PublicationEntity";
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+import {
+  IsBoolean,
+  IsEmpty,
+  IsInt,
+  Max,
+  MaxLength,
+  Min,
+} from 'class-validator';
+import { Publications } from '../../publications/entities/PublicationEntity';
+import { DetailsRequests } from '../../details/entities/DetailsRequestEntity';
 
 @Entity('pets')
 export class Pets {
@@ -45,4 +60,7 @@ export class Pets {
 
   @ManyToOne(() => Publications, (publication) => publication.pets)
   publication: Publications;
+
+  @OneToMany(() => DetailsRequests, (requests) => requests.petId)
+  requests: DetailsRequests[];
 }

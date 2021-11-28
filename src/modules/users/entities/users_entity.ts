@@ -2,9 +2,11 @@ import {
   Column,
   Entity,
   JoinColumn,
+  OneToMany,
   PrimaryColumn,
   PrimaryGeneratedColumn,
 } from 'typeorm';
+import { DetailsRequests } from '../../details/entities/DetailsRequestEntity';
 
 @Entity('users')
 export class Users {
@@ -28,4 +30,12 @@ export class Users {
   lastname: string;
   @JoinColumn({ name: 'ubication_id' })
   ubication_id: number;
+
+  @OneToMany(() => DetailsRequests, (request) => request.fromId)
+  requestsfrom: DetailsRequests[];
+
+  @OneToMany(() => DetailsRequests, (request) => request.toId)
+  requeststo: DetailsRequests[];
+
+
 }
