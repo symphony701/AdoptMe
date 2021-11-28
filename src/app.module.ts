@@ -18,12 +18,12 @@ import { Users } from './modules/users/entities/users_entity';
 import { Countries } from './modules/countries/entities/countries_entity';
 import { Departments } from './modules/departments/entities/departments_entity';
 import { Pets } from './modules/pets/entities/PetEntity';
-import { Publications } from "./modules/publications/entities/PublicationEntity";
-import { AdoptionRequests } from "./modules/adoption-request/entities/AdoptionRequestEntity";
-import { Memberships } from "./modules/memberships/entities/MembershipEntity";
+import { Publications } from './modules/publications/entities/PublicationEntity';
+import { AdoptionRequests } from './modules/adoption-request/entities/AdoptionRequestEntity';
+import { Memberships } from './modules/memberships/entities/MembershipEntity';
 import { Advertisements } from './modules/advertisements/entities/AdvertisementsEntity';
-import {Ubications} from "./modules/ubications/entities/UbicationEntity";
-import { Districts } from "./modules/districts/entities/DistrictEntity";
+import { Ubications } from './modules/ubications/entities/UbicationEntity';
+import { Districts } from './modules/districts/entities/DistrictEntity';
 import { DetailsRequests } from './modules/details/entities/DetailsRequestEntity';
 
 @Module({
@@ -36,11 +36,11 @@ import { DetailsRequests } from './modules/details/entities/DetailsRequestEntity
       // username: 'GdQkKixXdN',
       // password: 'PMvRTkeupb',
       // database: 'GdQkKixXdN',
-      host: 'localhost',
-      username: 'root',
+      host: 'us-cdbr-east-04.cleardb.com',
+      username: 'b9feb050bdc9d1',
       port: 3306,
-      password: 'PASSWORDPASSWORD',
-      database: 'demo2',
+      password: '298a1688',
+      database: 'heroku_35692114e753e55',
       entities: [
         Users,
         Departments,
@@ -52,7 +52,7 @@ import { DetailsRequests } from './modules/details/entities/DetailsRequestEntity
         Ubications,
         Districts,
         Advertisements,
-        DetailsRequests
+        DetailsRequests,
       ],
       synchronize: true,
     }),
